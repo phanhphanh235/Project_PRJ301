@@ -10,13 +10,13 @@ public class Products {
     private int SupplierID, CategoryID;
     private String QuantityPerUnit;
     private double UnitPrice;
-    private int UnitsInStock, UnitsOnOrder, ReoderLevel;
+    private int UnitsInStock, UnitsOnOrder, ReorderLevel;
     private boolean Discontinued;
 
     public Products() {
     }
 
-    public Products(int ProductID, String ProductName, int SupplierID, int CategoryID, String QuantityPerUnit, double UnitPrice, int UnitsInStock, int UnitsOnOrder, int ReoderLevel, boolean Discontinued) {
+    public Products(int ProductID, String ProductName, int SupplierID, int CategoryID, String QuantityPerUnit, double UnitPrice, int UnitsInStock, int UnitsOnOrder, int ReorderLevel, boolean Discontinued) {
         this.ProductID = ProductID;
         this.ProductName = ProductName;
         this.SupplierID = SupplierID;
@@ -25,10 +25,11 @@ public class Products {
         this.UnitPrice = UnitPrice;
         this.UnitsInStock = UnitsInStock;
         this.UnitsOnOrder = UnitsOnOrder;
-        this.ReoderLevel = ReoderLevel;
+        this.ReorderLevel = ReorderLevel;
         this.Discontinued = Discontinued;
     }
 
+    
     public int getProductID() {
         return ProductID;
     }
@@ -93,12 +94,12 @@ public class Products {
         this.UnitsOnOrder = UnitsOnOrder;
     }
 
-    public int getReoderLevel() {
-        return ReoderLevel;
+    public int getReorderLevel() {
+        return ReorderLevel;
     }
 
     public void setReoderLevel(int ReoderLevel) {
-        this.ReoderLevel = ReoderLevel;
+        this.ReorderLevel = ReoderLevel;
     }
 
     public boolean isDiscontinued() {
@@ -111,7 +112,7 @@ public class Products {
 
     @Override
     public String toString() {
-        return "Products{" + "ProductID=" + ProductID + ", ProductName=" + ProductName + ", SupplierID=" + SupplierID + ", CategoryID=" + CategoryID + ", QuantityPerUnit=" + QuantityPerUnit + ", UnitPrice=" + UnitPrice + ", UnitsInStock=" + UnitsInStock + ", UnitsOnOrder=" + UnitsOnOrder + ", ReoderLevel=" + ReoderLevel + ", Discontinued=" + Discontinued + '}';
+        return "Products{" + "ProductID=" + ProductID + ", ProductName=" + ProductName + ", SupplierID=" + SupplierID + ", CategoryID=" + CategoryID + ", QuantityPerUnit=" + QuantityPerUnit + ", UnitPrice=" + UnitPrice + ", UnitsInStock=" + UnitsInStock + ", UnitsOnOrder=" + UnitsOnOrder + ", ReoderLevel=" + ReorderLevel + ", Discontinued=" + Discontinued + '}';
     }
     
 }
