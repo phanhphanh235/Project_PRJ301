@@ -15,6 +15,15 @@
         </script>
     </head>
     <body>
+        <button><p align="right"><a href="cart?service=showCart">showCart</a> </p></button>
+        <button><p align="right"><a href="signIn?service=login">Login</a> <br></button>
+        <button><p align="right"><a href="logout?service=logout">LogOut</a> <br></button>
+        <%
+            String userName=(String)session.getAttribute("user");
+            if(userName!=null){
+        %>
+        <span style="color:red; text-align: right">Welcome <%=userName%></span>
+        <%}%></p>
         <p><a href="adminlist?service=insertProduct">Insert Product</a></p>
         <form action="product" method="get">
             <p><input type="text" name="pname" id="">
@@ -54,7 +63,7 @@
                 <td><%=pro.getStatus()%></td>
                 <td><a href="adminlist?service=updateProduct&pid=<%=pro.getPid()%>">update</a></td>
                 <td><a href="adminlist?service=deleteProduct&pid=<%=pro.getPid()%>" onclick="return confirmDelete()">delete</a></td>
-                <td><a href="CartController?service=add2cart&pid=<%=pro.getPid()%>">add2cart</a></td>
+                <td><a href="cart?service=add2cart&pid=<%=pro.getPid()%>">add2cart</a></td>
             </tr>
             <%}%>
         </table>
