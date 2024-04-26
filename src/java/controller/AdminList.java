@@ -8,18 +8,19 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.ResultSet;
 import java.util.Vector;
 import model.DAOProduct;
-import java.sql.ResultSet;
 
 /**
  *
  * @author admin
  */
-public class ProductController extends HttpServlet {
-
+public class AdminList extends HttpServlet {
+   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         DAOProduct dao = new DAOProduct();
@@ -124,25 +125,21 @@ public class ProductController extends HttpServlet {
                 response.sendRedirect("product");
             }
         }
-    }
+    } 
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         processRequest(request, response);
-    }
+    } 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    throws ServletException, IOException {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+
     @Override
     public String getServletInfo() {
         return "Short description";

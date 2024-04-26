@@ -15,7 +15,7 @@
         </script>
     </head>
     <body>
-        <p><a href="adminlist?service=insertProduct">Insert Product</a></p>
+        <p><a href="product?service=insertProduct">Insert Product</a></p>
         <form action="product" method="get">
             <p><input type="text" name="pname" id="">
                 <input type="submit" name="submit" value="searchName">
@@ -52,8 +52,8 @@
                 <td><%=pro.getCatid()%></td>
                 <td><%=pro.getImage()%></td>
                 <td><%=pro.getStatus()%></td>
-                <td><a href="adminlist?service=updateProduct&pid=<%=pro.getPid()%>">update</a></td>
-                <td><a href="adminlist?service=deleteProduct&pid=<%=pro.getPid()%>" onclick="return confirmDelete()">delete</a></td>
+                <td><a href="product?service=updateProduct&pid=<%=pro.getPid()%>">update</a></td>
+                <td><a href="product?service=deleteProduct&pid=<%=pro.getPid()%>" onclick="return confirmDelete()">delete</a></td>
                 <td><a href="CartController?service=add2cart&pid=<%=pro.getPid()%>">add2cart</a></td>
             </tr>
             <%}%>

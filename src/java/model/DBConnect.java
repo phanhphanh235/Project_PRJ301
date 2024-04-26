@@ -36,7 +36,7 @@ public class DBConnect {
         return rs;
     }
     public DBConnect() {
-        this("jdbc:sqlserver://localhost:1433;databaseName=BookStore",
+        this("jdbc:sqlserver://localhost:1433;databaseName=ProjectPRJ",
                 "sa","23052003");
     }
 //    public static void main(String[] args) {

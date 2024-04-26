@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
     <servlet>
-        <servlet-name>EmployeeController</servlet-name>
-        <servlet-class>controller.EmployeeController</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>ProductController</servlet-name>
         <servlet-class>controller.ProductController</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>EmployeeController</servlet-name>
-        <url-pattern>/EmployeeController</url-pattern>
-    </servlet-mapping>
+    <servlet>
+        <servlet-name>CategoriesController</servlet-name>
+        <servlet-class>controller.CategoriesController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>controller.SignIn</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>controller.SignUp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>controller.Home</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminList</servlet-name>
+        <servlet-class>controller.AdminList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>controller.CartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProductController</servlet-name>
-        <url-pattern>/ProductController</url-pattern>
+        <url-pattern>/product</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoriesController</servlet-name>
+        <url-pattern>/CategoriesController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/signIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/signUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminList</servlet-name>
+        <url-pattern>/adminlist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
 </web-app>
